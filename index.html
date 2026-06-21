@@ -1,0 +1,1330 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elite Betting Tips PRO - Premium football predictions, winning strategies, and VIP access for serious bettors.">
+  <meta name="theme-color" content="#0066ff">
+  <title>Elite Betting Tips PRO</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-blue: #0066ff;
+      --dark-blue: #001a4d;
+      --bright-green: #00ff88;
+      --dark-green: #003d1a;
+      --black: #0a0a0a;
+      --dark-gray: #121212;
+      --light-gray: #e5e5e5;
+      --accent-red: #ff6b6b;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+      color: var(--light-gray);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 102, 255, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 15% 40%, rgba(0, 255, 136, 0.15), transparent 35%);
+      pointer-events: none;
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      color: var(--bright-green);
+      text-shadow: 0 0 25px rgba(0, 255, 136, 0.35);
+      letter-spacing: -1px;
+      position: relative;
+      z-index: 1;
+      animation: slideDown 0.6s ease-out;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      color: var(--light-gray);
+      margin-top: 15px;
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+      animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+
+    .topbar {
+      background: linear-gradient(90deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+      padding: 18px 20px;
+      text-align: center;
+      font-weight: 700;
+      color: var(--bright-green);
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
+      animation: slideDown 0.5s ease-out;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      background: rgba(0, 16, 64, 0.94);
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid rgba(0, 255, 136, 0.25);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: var(--light-gray);
+      text-decoration: none;
+      font-weight: 700;
+      transition: var(--transition);
+      position: relative;
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 3px;
+      background: var(--bright-green);
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--bright-green);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 50px 20px 80px;
+    }
+
+    section {
+      margin-bottom: 60px;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    section h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--bright-green);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      border-bottom: 3px solid rgba(0, 255, 136, 0.35);
+      padding-bottom: 14px;
+    }
+
+    /* Cards */
+    .card,
+    .vip-card,
+    .result-card,
+    .testimonial-card,
+    .faq-item {
+      background: linear-gradient(135deg, rgba(0, 26, 77, 0.55) 0%, rgba(10, 10, 10, 0.75) 100%);
+      border-radius: 16px;
+      padding: 28px;
+      border-left: 5px solid var(--primary-blue);
+      box-shadow: 0 12px 35px rgba(0, 102, 255, 0.12);
+      transition: var(--transition);
+      backdrop-filter: blur(8px);
+    }
+
+    .card:hover,
+    .vip-card:hover,
+    .result-card:hover,
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--bright-green);
+      box-shadow: 0 18px 48px rgba(0, 255, 136, 0.18);
+    }
+
+    .card h3,
+    .vip-card h3,
+    .result-card h3,
+    .testimonial-card h3,
+    .faq-item h3 {
+      color: var(--bright-green);
+      margin-bottom: 14px;
+      font-size: 1.35rem;
+    }
+
+    .card p,
+    .vip-card p,
+    .result-card p,
+    .testimonial-card p,
+    .faq-item p {
+      color: #c0c0c8;
+      margin: 10px 0;
+      line-height: 1.7;
+    }
+
+    /* VIP Grid */
+    .vip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .vip-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 102, 255, 0.15);
+      padding: 32px;
+      min-height: 380px;
+    }
+
+    .vip-card::before {
+      content: '';
+      position: absolute;
+      inset: -30% 60% auto auto;
+      width: 220px;
+      height: 220px;
+      background: rgba(0, 255, 136, 0.08);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .vip-price {
+      font-size: 2rem;
+      color: var(--bright-green);
+      font-weight: 900;
+      margin: 18px 0;
+    }
+
+    .vip-card p {
+      font-size: 0.98rem;
+    }
+
+    /* Buttons */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      padding: 0 18px;
+      margin-top: 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bright-green) 100%);
+      color: #000;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 10px 24px rgba(0, 102, 255, 0.25);
+      border: none;
+      font-size: 1rem;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0, 255, 136, 0.25);
+    }
+
+    .button:active {
+      transform: translateY(0);
+    }
+
+    .button.secondary {
+      background: rgba(0, 102, 255, 0.2);
+      color: var(--bright-green);
+      border: 2px solid var(--primary-blue);
+    }
+
+    .button.secondary:hover {
+      background: rgba(0, 102, 255, 0.3);
+    }
+
+    /* Results Grid */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .result-card {
+      border-left: 5px solid var(--primary-blue);
+    }
+
+    .result-card.won {
+      border-left-color: var(--bright-green);
+    }
+
+    .result-card.lost {
+      border-left-color: var(--accent-red);
+    }
+
+    .result-status {
+      margin-top: 16px;
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .won {
+      color: var(--bright-green);
+    }
+
+    .lost {
+      color: var(--accent-red);
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 24px;
+      margin-top: 22px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-item p:first-child {
+      color: #8b8b9d;
+      font-size: 0.9rem;
+    }
+
+    .stat-item p:last-child {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-top: 8px;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .testimonial-card {
+      border-left: 5px solid var(--primary-blue);
+    }
+
+    .testimonial-card .stars {
+      color: #ffd700;
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .testimonial-card .author {
+      color: var(--bright-green);
+      font-weight: 700;
+      margin-top: 15px;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-left: 5px solid var(--primary-blue);
+    }
+
+    .faq-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px 0;
+    }
+
+    .faq-header:hover {
+      color: var(--bright-green);
+    }
+
+    .faq-toggle {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-toggle.active {
+      transform: rotate(180deg);
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0;
+    }
+
+    .faq-content.active {
+      max-height: 500px;
+      padding: 15px 0;
+    }
+
+    /* Newsletter Form */
+    .newsletter-form {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 200px;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 2px solid rgba(0, 102, 255, 0.3);
+      background: rgba(0, 26, 77, 0.3);
+      color: var(--light-gray);
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .newsletter-form input:focus {
+      outline: none;
+      border-color: var(--bright-green);
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+    }
+
+    .newsletter-form input::placeholder {
+      color: #8b8b9d;
+    }
+
+    .form-message {
+      margin-top: 12px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .form-message.success {
+      display: block;
+      background: rgba(0, 255, 136, 0.2);
+      color: var(--bright-green);
+      border-left: 4px solid var(--bright-green);
+    }
+
+    .form-message.error {
+      display: block;
+      background: rgba(255, 107, 107, 0.2);
+      color: var(--accent-red);
+      border-left: 4px solid var(--accent-red);
+    }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #25D366;
+      color: white;
+      padding: 14px 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Telegram Float */
+    .telegram-float {
+      position: fixed;
+      right: 18px;
+      bottom: 80px;
+      background: #0088cc;
+      color: white;
+      padding: 14px 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .telegram-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .popup.active {
+      display: flex;
+    }
+
+    .popup-content {
+      width: min(100%, 460px);
+      background: linear-gradient(135deg, var(--dark-blue) 0%, var(--black) 100%);
+      border: 2px solid var(--bright-green);
+      border-radius: 18px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      position: relative;
+      animation: slideUp 0.3s ease;
+    }
+
+    .popup-content h3 {
+      font-size: 1.5rem;
+      color: var(--bright-green);
+      margin-bottom: 18px;
+    }
+
+    .popup-content p {
+      color: #d0d0d8;
+      text-align: left;
+      white-space: pre-line;
+      line-height: 1.8;
+      margin-bottom: 24px;
+      font-size: 0.98rem;
+    }
+
+    .popup-content .close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      color: var(--bright-green);
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: rgba(0, 255, 136, 0.1);
+      border: 2px solid transparent;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .popup-content .close:hover,
+    .popup-content .close:focus {
+      transform: scale(1.15);
+      background: rgba(0, 255, 136, 0.2);
+      border-color: var(--bright-green);
+    }
+
+    .popup-content .close:active {
+      transform: scale(0.95);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #090909 0%, #121623 100%);
+      padding: 60px 20px 40px;
+      color: #b0b0c0;
+      border-top: 2px solid rgba(0, 102, 255, 0.2);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1180px;
+      margin: 0 auto 40px;
+    }
+
+    footer h3 {
+      color: var(--bright-green);
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+    }
+
+    footer a {
+      color: var(--bright-green);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--primary-blue);
+    }
+
+    .trust-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 25px;
+      text-align: center;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .trust-stats div h3 {
+      color: var(--bright-green);
+      font-size: 1.85rem;
+      margin-bottom: 6px;
+    }
+
+    .trust-stats div p {
+      color: #8b8b9d;
+      font-size: 0.95rem;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
+      margin: 32px 0;
+    }
+
+    .copyright {
+      text-align: center;
+      color: #7a7a8a;
+      font-size: 0.95rem;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    /* Animations */
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    /* Loading State */
+    .loading {
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 900px) {
+      nav {
+        gap: 18px;
+      }
+
+      .container {
+        padding: 40px 18px 70px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .vip-card,
+      .card,
+      .result-card,
+      .testimonial-card,
+      .popup-content {
+        padding: 24px;
+      }
+
+      header {
+        padding: 50px 18px;
+      }
+
+      section h2 {
+        font-size: 1.75rem;
+      }
+
+      .button {
+        min-height: 48px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form input,
+      .newsletter-form button {
+        width: 100%;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .topbar {
+        font-size: 0.85rem;
+      }
+
+      section h2 {
+        font-size: 1.4rem;
+        gap: 8px;
+      }
+
+      .vip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header role="banner">
+    <h1>Elite Betting Tips PRO</h1>
+    <p>Premium football predictions, winning strategies, and VIP access for serious bettors.</p>
+  </header>
+
+  <!-- Topbar -->
+  <div class="topbar" role="status" aria-live="polite">
+    ⭐ Trusted by 5017+ users | 98% Accuracy | VIP Access Available
+  </div>
+
+  <!-- Navigation -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="#free">📊 Free Tips</a>
+    <a href="#vip">💎 VIP Packages</a>
+    <a href="#results">📈 Results</a>
+    <a href="#testimonials">⭐ Reviews</a>
+    <a href="#faq">❓ FAQ</a>
+    <a href="#contact">📱 Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container" role="main">
+    <!-- Free Tips Section -->
+    <section id="free">
+      <h2><i class="fas fa-star"></i> Free Daily Tips</h2>
+
+      <div class="card">
+        <h3>Sweden vs Netherlands</h3>
+        <p><strong>Prediction:</strong> Over 2.5 Goals</p>
+        <p><strong>Odds:</strong> 1.95 | <strong>Confidence:</strong> 95%</p>
+        <p style="color: var(--bright-green); margin-top: 12px;">High-scoring contest expected from both sides. Both teams have strong attacking formations and defensive vulnerabilities.</p>
+      </div>
+
+      <div class="card">
+        <h3>Germany vs Ivory Coast</h3>
+        <p><strong>Prediction:</strong> Both Teams to Score</p>
+        <p><strong>Odds:</strong> 1.68 | <strong>Confidence:</strong> 92%</p>
+        <p style="color: var(--bright-green); margin-top: 12px;">Both teams have strong attacking records. Expect an open, entertaining match with goals at both ends.</p>
+      </div>
+    </section>
+
+    <!-- VIP Packages Section -->
+    <section id="vip">
+      <h2><i class="fas fa-crown"></i> VIP Premium Packages</h2>
+
+      <div class="vip-grid">
+        <div class="vip-card">
+          <h3>Daily VIP</h3>
+          <div class="vip-price">10,000 UGX</div>
+          <p>✅ High accuracy daily picks</p>
+          <p>✅ Real-time match analysis</p>
+          <p>✅ Instant WhatsApp premium support</p>
+          <p>✅ Limited slots available</p>
+          <button class="button" onclick="buyVIP('Daily VIP', 10000)" aria-label="Get Daily VIP package">Get Started</button>
+        </div>
+
+        <div class="vip-card">
+          <h3>Weekly VIP</h3>
+          <div class="vip-price">30,000 UGX</div>
+          <p>✅ Full weekly predictions</p>
+          <p>✅ In-depth strategy guidance</p>
+          <p>✅ Priority response</p>
+          <p>✅ Most popular plan</p>
+          <button class="button" onclick="buyVIP('Weekly VIP', 30000)" aria-label="Get Weekly VIP package">Get Started</button>
+        </div>
+
+        <div class="vip-card">
+          <h3>Monthly VIP</h3>
+          <div class="vip-price">50,000 UGX</div>
+          <p>✅ Unlimited VIP predictions</p>
+          <p>✅ Full strategy system</p>
+          <p>✅ 24/7 dedicated support</p>
+          <p>✅ Best long-term value</p>
+          <button class="button" onclick="buyVIP('Monthly VIP', 50000)" aria-label="Get Monthly VIP package">Get Started</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results">
+      <h2><i class="fas fa-chart-line"></i> Recent Winning Results</h2>
+
+      <div class="card" style="border-left-color: var(--bright-green);">
+        <h3>Latest Winning Slip</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; margin-top: 20px;">
+          <div>
+            <p style="color:#8b8b9d;">Bet Type</p>
+            <p style="color: var(--bright-green); font-weight: 700;">5-Fold Accumulator</p>
+          </div>
+          <div>
+            <p style="color:#8b8b9d;">Total Odds</p>
+            <p style="color: var(--primary-blue); font-weight: 700;">8.74</p>
+          </div>
+          <div>
+            <p style="color:#8b8b9d;">Stake</p>
+            <p style="color: var(--light-gray); font-weight: 700;">10,000 UGX</p>
+          </div>
+          <div>
+            <p style="color:#8b8b9d;">Return</p>
+            <p style="color: var(--bright-green); font-weight: 700;">87,400 UGX</p>
+          </div>
+        </div>
+        <p style="margin-top: 20px; color: var(--bright-green); font-weight: 700;">✅ WON - BIG PROFIT!</p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card won">
+          <h3>Manchester United vs Chelsea</h3>
+          <p><strong>Prediction:</strong> Over 2.5 Goals</p>
+          <p><strong>Odds:</strong> 1.85</p>
+          <p><strong>Score:</strong> 3 - 1</p>
+          <p class="result-status won">WINNER ✓</p>
+        </div>
+
+        <div class="result-card won">
+          <h3>Arsenal vs Liverpool</h3>
+          <p><strong>Prediction:</strong> Both Teams to Score</p>
+          <p><strong>Odds:</strong> 1.72</p>
+          <p><strong>Score:</strong> 2 - 2</p>
+          <p class="result-status won">WINNER ✓</p>
+        </div>
+
+        <div class="result-card lost">
+          <h3>Real Madrid vs Sevilla</h3>
+          <p><strong>Prediction:</strong> Over 3.5 Goals</p>
+          <p><strong>Odds:</strong> 2.20</p>
+          <p><strong>Score:</strong> 2 - 0</p>
+          <p class="result-status lost">LOST ✗</p>
+        </div>
+
+        <div class="result-card won">
+          <h3>PSG vs Lyon</h3>
+          <p><strong>Prediction:</strong> PSG Win</p>
+          <p><strong>Odds:</strong> 1.65</p>
+          <p><strong>Score:</strong> 4 - 1</p>
+          <p class="result-status won">WINNER ✓</p>
+        </div>
+      </div>
+
+      <div class="card" style="border-left-color: var(--primary-blue); margin-top: 35px;">
+        <h3>Weekly Performance Stats</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <p>Total Wins</p>
+            <p style="color: var(--bright-green);">18</p>
+          </div>
+          <div class="stat-item">
+            <p>Losses</p>
+            <p style="color: var(--accent-red);">4</p>
+          </div>
+          <div class="stat-item">
+            <p>Win Rate</p>
+            <p style="color: var(--bright-green);">81.8%</p>
+          </div>
+          <div class="stat-item">
+            <p>ROI</p>
+            <p style="color: var(--bright-green);">+22%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+      <h2><i class="fas fa-quote-left"></i> What Our Users Say</h2>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Elite Betting Tips has completely changed my betting strategy. The accuracy is incredible and the support is 24/7. Highly recommended!"</p>
+          <p class="author">- Kampala, Uganda</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"I've been using their VIP package for 3 months now and the ROI has been amazing. Best investment I've made. Great team!"</p>
+          <p class="author">- John K., Nairobi</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Finally found a reliable tips service. The analysis is detailed and the predictions are consistently accurate. Worth every penny!"</p>
+          <p class="author">- Sarah M., Accra</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The daily tips alone have paid for my subscription 10 times over. The community and support are amazing. Absolutely love it!"</p>
+          <p class="author">- Patrick D., Dar es Salaam</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How accurate are your predictions?</h3>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>Our predictions have an average accuracy rate of 98% based on historical data. We use advanced statistical analysis and machine learning to analyze team performance, player stats, and market trends. However, remember that no prediction is 100% guaranteed.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How do I get started with VIP?</h3>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>Getting started is easy! Simply select your preferred VIP package above, click "Get Started", and follow the WhatsApp instructions. Send the payment to the provided account, and we'll activate your VIP access immediately after confirming payment. You'll get instant access to all premium tips and analysis.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What payment methods do you accept?</h3>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>We accept mobile money transfers (MTN, Airtel, Vodafone), bank transfers, and other local payment methods. The specific methods available depend on your location. Contact us on WhatsApp for your region's payment options.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Can I get a refund if I'm not satisfied?</h3>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>If you're not satisfied within the first 3 days of your subscription, we offer a full refund. We're confident in our service quality, but we want you to be completely satisfied. Contact our support team on WhatsApp to request a refund.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How often do you update tips?</h3>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>Daily VIP members receive updates daily, Weekly VIP members get comprehensive weekly analysis, and Monthly VIP members receive ongoing updates throughout the month. All tips are updated based on team news, player injuries, and market analysis up to 2 hours before match kickoff.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Is this legal and safe?</h3>
+            <span class="faq-toggle">▼</span>
+          </div>
+          <div class="faq-content">
+            <p>Absolutely. We provide tips and analysis for informational purposes only. We are not a bookmaker and do not accept bets or hold funds. We comply with all applicable regulations and encourage responsible gambling. Always verify our information and never bet more than you can afford to lose.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section style="background: linear-gradient(135deg, rgba(0, 102, 255, 0.1) 0%, rgba(0, 255, 136, 0.05) 100%); padding: 40px; border-radius: 16px; margin-bottom: 60px;">
+      <h2 style="text-align: center; margin-bottom: 20px;"><i class="fas fa-envelope"></i> Get Free Weekly Tips</h2>
+      <p style="text-align: center; color: #c0c0c8; margin-bottom: 25px;">Subscribe to our newsletter and receive exclusive tips, analysis, and special offers directly to your inbox.</p>
+      
+      <form id="newsletterForm" class="newsletter-form">
+        <input 
+          type="email" 
+          placeholder="Enter your email address" 
+          required 
+          aria-label="Email address"
+        >
+        <button type="submit" class="button" style="flex: 0 0 auto; min-width: 150px;">Subscribe Now</button>
+      </form>
+      <div id="newsletterMessage" class="form-message"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <h3>Elite Betting Tips PRO</h3>
+        <p>Professional football analysis, VIP predictions, daily match insights, and winning strategies for serious bettors.</p>
+        <p style="margin-top: 14px; font-weight: 700; color: var(--bright-green);">Trusted by 5017+ users worldwide.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#free">Free Tips</a></p>
+        <p><a href="#vip">VIP Packages</a></p>
+        <p><a href="#results">Results</a></p>
+        <p><a href="#testimonials">Reviews</a></p>
+        <p><a href="#faq">FAQ</a></p>
+      </div>
+      <div>
+        <h3>Contact Info</h3>
+        <p>📱 WhatsApp: <strong style="color: var(--bright-green);">+256 705754850</strong></p>
+        <p>📱 Telegram: <strong style="color: var(--bright-green);">+256 787132064</strong></p>
+        <p>👤 Manager: <strong>Grant</strong></p>
+        <p>📍 Uganda</p>
+        <p>⏰ Support: <strong>24/7</strong></p>
+      </div>
+      <div>
+        <h3>VIP Benefits</h3>
+        <p>✅ Daily Premium Tips</p>
+        <p>✅ High Odds Analysis</p>
+        <p>✅ Multi-League Coverage</p>
+        <p>✅ Priority Support</p>
+        <p>✅ Winning Strategy Guides</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="trust-stats">
+      <div><h3>5017+</h3><p>Active Users</p></div>
+      <div><h3>24/7</h3><p>Support</p></div>
+      <div><h3>1000+</h3><p>VIP Members</p></div>
+      <div><h3>98%</h3><p>Accuracy</p></div>
+    </div>
+
+    <hr>
+
+    <div style="max-width: 1180px; margin: 0 auto; color: #8e8e9b; font-size: 0.95rem; line-height: 1.8;">
+      <p><strong style="color: var(--bright-green);">Responsible Gambling:</strong> Betting involves financial risk. Never stake more than you can afford. Past results do not guarantee future outcomes. Always gamble responsibly.</p>
+      <p style="margin-top: 12px;"><strong style="color: var(--bright-green);">Age Restriction:</strong> This site is for users 18+ only.</p>
+      <p style="margin-top: 12px;"><strong style="color: var(--bright-green);">Disclaimer:</strong> We do not accept bets, hold funds, or operate as a bookmaker. Tips are provided for informational purposes only. Users are responsible for verifying all information before placing bets.</p>
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+      <p>© 2026 Elite Betting Tips PRO. All Rights Reserved.</p>
+      <p>Powered by Elite Betting Analysis System.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <a class="whatsapp-float" href="https://wa.me/256705754850?text=Hello%20I%20want%20VIP%20access" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+
+  <!-- Telegram Float Button -->
+  <a class="telegram-float" href="https://t.me/+256787132064" target="_blank" rel="noopener noreferrer" aria-label="Contact us on Telegram">
+    <i class="fab fa-telegram"></i> Telegram
+  </a>
+
+  <!-- VIP Payment Popup -->
+  <div class="popup" id="popup" role="dialog" aria-labelledby="popupTitle" aria-hidden="true">
+    <div class="popup-content">
+      <button class="close" onclick="closePopup()" aria-label="Close payment details" type="button">✕</button>
+      <h3 id="popupTitle">VIP Payment Details</h3>
+      <p id="vipText"></p>
+      <a id="waLink" class="button" href="#" target="_blank" rel="noopener noreferrer">Confirm on WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    // VIP Purchase Handler
+    function buyVIP(plan, price) {
+      const number = '0786061380';
+      const waNumber = '256705754850';
+      const name = 'Jean Amacien';
+
+      const message = `🔥 VIP PAYMENT REQUEST\n\nPlan: ${plan}\nAmount: ${price} UGX\n\n📲 Send Payment To:\n${number} (${name})\n\nAfter payment, send screenshot for instant activation.`;
+
+      const popup = document.getElementById('popup');
+      const vipText = document.getElementById('vipText');
+      const waLink = document.getElementById('waLink');
+
+      vipText.innerText = message;
+      waLink.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(message);
+      popup.classList.add('active');
+    }
+
+    // Close Popup
+    function closePopup() {
+      const popup = document.getElementById('popup');
+      popup.classList.remove('active');
+    }
+
+    // Popup - Click outside to close
+    document.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById('popup');
+      
+      window.addEventListener('click', function(event) {
+        if (event.target === popup) {
+          popup.classList.remove('active');
+        }
+      });
+
+      // Close button
+      const closeBtn = document.querySelector('.close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closePopup);
+      }
+
+      // Smooth scroll for nav links
+      document.querySelectorAll('a[href^="#"]:not([target])').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Newsletter Form Handling
+      const newsletterForm = document.getElementById('newsletterForm');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const emailInput = this.querySelector('input[type="email"]');
+          const email = emailInput.value.trim();
+          const messageDiv = document.getElementById('newsletterMessage');
+
+          // Validate email
+          if (!validateEmail(email)) {
+            showMessage(messageDiv, 'Please enter a valid email address', 'error');
+            return;
+          }
+
+          // Show loading state
+          const submitBtn = this.querySelector('button');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Subscribing...';
+          submitBtn.disabled = true;
+
+          // Simulate API call
+          setTimeout(() => {
+            showMessage(messageDiv, 'Successfully subscribed! Check your email for exclusive tips.', 'success');
+            emailInput.value = '';
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }, 1000);
+        });
+      }
+
+      // FAQ Accordion
+      setupFAQ();
+
+      // Add scroll animations
+      setupScrollAnimations();
+    });
+
+    // Email Validation
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    // Show Message
+    function showMessage(element, text, type) {
+      if (!element) return;
+      
+      element.textContent = text;
+      element.className = `form-message ${type}`;
+      
+      // Auto-hide success messages after 5 seconds
+      if (type === 'success') {
+        setTimeout(() => {
+          element.className = 'form-message';
+        }, 5000);
+      }
+    }
+
+    // FAQ Accordion Setup
+    function setupFAQ() {
+      const faqHeaders = document.querySelectorAll('.faq-header');
+      
+      faqHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+          const faqItem = this.closest('.faq-item');
+          const toggle = this.querySelector('.faq-toggle');
+          const content = faqItem.querySelector('.faq-content');
+          
+          // Close other open FAQs
+          document.querySelectorAll('.faq-item').forEach(item => {
+            if (item !== faqItem) {
+              const itemContent = item.querySelector('.faq-content');
+              const itemToggle = item.querySelector('.faq-toggle');
+              itemContent.classList.remove('active');
+              itemToggle.classList.remove('active');
+            }
+          });
+          
+          // Toggle current FAQ
+          toggle.classList.toggle('active');
+          content.classList.toggle('active');
+        });
+      });
+    }
+
+    // Scroll Animations
+    function setupScrollAnimations() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      // Observe cards and sections
+      document.querySelectorAll('.card, .vip-card, .result-card, .testimonial-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+      });
+    }
+
+    // Accessibility: Add keyboard navigation
+    document.addEventListener('keydown', function(event) {
+      // Close popup on Escape
+      if (event.key === 'Escape') {
+        closePopup();
+      }
+    });
+
+    // Theme persistence (optional dark/light mode)
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    // Initialize on page load
+    window.addEventListener('load', function() {
+      initTheme();
+    });
+  </script>
+</body>
+</html>
